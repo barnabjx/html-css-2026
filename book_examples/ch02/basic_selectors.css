@@ -1,0 +1,20 @@
+/* Type */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    padding: 1em;
+}
+h1 {
+    font-size: 160%;
+}
+
+/* ID */
+#copyright {
+    font-size: 75%;
+    text-align: right;
+}
+
+/* Class */
+.base_color {
+    color: navy;
+}
