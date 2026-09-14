@@ -1,6 +1,6 @@
 /* Type */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Changes the font styles */ 
     max-width: 800px;
     padding: 1em;
 }
@@ -11,10 +11,11 @@ h1 {
 /* ID */
 #copyright {
     font-size: 75%;
-    text-align: right;
+    text-align: center;
+    background-color: orange;
 }
 
 /* Class */
 .base_color {
-    color: navy;
+    color: rgb(0, 128, 21);
 }
