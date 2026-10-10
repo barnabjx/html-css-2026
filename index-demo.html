@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
         <link rel="stylesheet" href="css/styles-demo.css" />
         <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-        <script defer src="scripts/main-demo.js"></script>
+        <script defer src="scripts/main.js"></script>
     </head>
     <body>
         <header>
@@ -34,17 +34,34 @@
                 </nav><!-- shortcut-links -->
                 <nav id="contact-mobile-nav">
                     <a href="contact-demo.html" class="btn header-btn">Contact Us</a>
-                    <div id="mobile-nav">
+                    <button
+                        id="mobile-nav"
+                        type="button"
+                        aria-controls="main-menu"
+                        aria-expanded="false"
+                    >
                         <i class="fa-solid fa-bars fa-2xl"></i>
-                    </div>
+                    </button>
                 </nav><!-- contact-mobile-nav -->
-                <nav id="main-menu">
                 <nav id="main-menu" class="is-closed">
                     <ul>
                         <li class="active"><a href="index-demo.html">Home</a></li>
-                        <li><a href="#">Our Firm</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Our Firm <small class="arrow"></small></a>
+                            <ul class="submenu">
+                                <li><a href="#">Our History</a></li>
+                                <li><a href="#">Our Approach</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Attorneys</a></li>
-                        <li><a href="#">Practice Areas</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Practice Areas <small class="arrow"></small></a>
+                            <ul class="submenu">
+                                <li><a href="#">Business Law</a></li>
+                                <li><a href="#">Litigation</a></li>
+                                <li><a href="#">Estate Planning</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">News &amp; Announcements</a></li>
                     </ul>
                 </nav><!-- main-menu -->

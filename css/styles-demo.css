@@ -1,11 +1,22 @@
 body {
+    margin: 0;
+    color: #09058a;
     font-family: 'Merriweather', serif;
 }
 
+:root {
+    --color-brand: #09058a;
+    --color-accent: #08b9f5;
+    --color-white: #fff;
+    --color-text: #09058a;
+    --color-border: #dedede;
+    --color-shadow: rgb(9 5 138 / 18%);
+}
+
 @media (max-width: 767px) {
-    /* @media (max-width: 767px) { */
     header {
-        border-top: 6px solid var(--color-brand);
+        border-top: 2px solid var(--color-brand);
+        background: var(--color-white);
     }
 
     #header-grid {
@@ -16,32 +27,32 @@ body {
     #header-logo {
         display: flex;
         justify-content: center;
-        padding: 20px 0 24px;
+        padding: 12px 0 14px;
     }
 
     #header-logo img {
         display: block;
-        width: 290px;
-        max-width: 80vw;
+        width: 205px;
+        max-width: 72%;
         height: auto;
     }
 
     #shortcut-links {
-        padding: 0 12px 20px;
+        padding: 0 8px 8px;
     }
 
     #shortcut-links ul {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 8px 14px;
+        gap: 8px;
         margin: 0;
         list-style: none;
     }
 
     #shortcut-links li {
         white-space: nowrap;
-        font-size: 18px;
+        font-size: 12px;
         font-weight: 700;
     }
 
@@ -53,32 +64,36 @@ body {
     #shortcut-links .fa-li {
         position: static;
         width: auto;
-        margin-right: 5px;
+        margin-right: 3px;
         color: var(--color-accent);
     }
 
     #contact-mobile-nav {
         display: flex;
-        min-height: 62px;
+        min-height: 39px;
         align-items: stretch;
         justify-content: space-between;
         background: var(--color-brand);
     }
 
+    #contact-mobile-nav > * {
+        min-height: 39px;
+    }
+
     #contact-mobile-nav .header-btn {
         display: flex;
         align-items: center;
-        padding: 0 32px;
+        padding: 0 19px;
         background: var(--color-accent);
         color: var(--color-white);
-        font-size: 21px;
+        font-size: 12px;
         font-weight: 700;
         text-decoration: none;
     }
 
     #mobile-nav {
         display: flex;
-        min-width: 98px;
+        min-width: 76px;
         align-items: center;
         justify-content: center;
         gap: 10px;
@@ -86,10 +101,13 @@ body {
         cursor: pointer;
         font-size: 18px;
         font-weight: 700;
+        border: 0;
+        background: transparent;
+        padding: 0;
     }
 
     #mobile-nav::before {
-        content: 'MENU';
+        content: none;
     }
 
     #mobile-nav:focus-visible {
@@ -106,14 +124,18 @@ body {
         display: none;
     }
 
+    #main-menu.is-open {
+        display: block;
+    }
+
     #main-menu ul {
-        margin: 0 20px;
+        margin: 0 7px;
         list-style: none;
     }
 
     #main-menu li {
         position: relative;
-        min-height: 76px;
+        min-height: 48px;
         border-bottom: 1px dotted var(--color-border);
     }
 
@@ -123,9 +145,9 @@ body {
 
     #main-menu li a {
         display: flex;
-        min-height: 76px;
+        min-height: 48px;
         align-items: center;
-        padding: 0 18px;
+        padding: 0 16px;
         color: var(--color-text);
         font-family: 'Merriweather', serif;
         font-size: 18px;
@@ -133,8 +155,41 @@ body {
         text-decoration: none;
     }
 
+    #main-menu .has-submenu > a {
+        justify-content: flex-start;
+    }
+
+    #main-menu .has-submenu .arrow::after {
+        color: var(--color-accent);
+        content: '\25B6';
+        font-size: 12px;
+        margin-left: 8px;
+    }
+
+    #main-menu .submenu {
+        display: none;
+        margin: 0;
+        padding: 0 0 8px 18px;
+    }
+
+    #main-menu .has-submenu:hover > .submenu,
+    #main-menu .has-submenu:focus-within > .submenu {
+        display: block;
+    }
+
+    #main-menu .submenu li {
+        min-height: auto;
+        border-bottom: 0;
+    }
+
+    #main-menu .submenu li a {
+        min-height: 40px;
+        padding: 0 18px;
+        color: var(--color-brand);
+        font-size: 16px;
+    }
+
     #main-menu li.active a {
         color: var(--color-accent);
     }
 }
-/* } */
